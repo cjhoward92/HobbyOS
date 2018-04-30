@@ -8,7 +8,7 @@
 #endif
  
 /* This tutorial will only work for the 32-bit ix86 targets. */
-#if !defined(__x86_64__)
+#if !defined(__i386__)
 #error "This tutorial needs to be compiled with an x86_64-elf compiler"
 #endif
  
