@@ -3,9 +3,9 @@
 #include <stdint.h>
  
 /* Check if the compiler thinks we are targeting the wrong operating system. */
-#if defined(__linux__)
-#error "You are not using a cross-compiler, you will most certainly run into trouble"
-#endif
+// #if defined(__linux__)
+// #error "You are not using a cross-compiler, you will most certainly run into trouble"
+// #endif
  
 /* This tutorial will only work for the 32-bit ix86 targets. */
 #if !defined(__i386__)
@@ -14,7 +14,7 @@
  
 /* Hardware text mode color constants. */
 enum vga_color {
-  VGA_COLOR_BLACK = 0,
+  	VGA_COLOR_BLACK = 0,
 	VGA_COLOR_BLUE = 1,
 	VGA_COLOR_GREEN = 2,
 	VGA_COLOR_CYAN = 3,
