@@ -11,11 +11,22 @@ unsigned char tolower(unsigned char c)
 
 void *memcpy(void *dest, const void *src, size_t n)
 {
-    char *d = dest;
-    const unsigned char *s = src;
+    unsigned char *d = dest;
+    unsigned char *s = src;
     while (n--)
-        *d++ = s[n - 1];
+        *d++ = *s++;
     return d;
+}
+
+void *memmove(void *dest, const void *src, size_t n) {
+    unsigned char *d = dest;
+    unsigned char *str = src;
+    unsigned char s[n];
+
+    size_t i;
+    for (i = 0; i < n; i++) {
+        s[i] = str[i];
+    }
 }
 
 void *memchr(const void *str, int c, size_t n)
